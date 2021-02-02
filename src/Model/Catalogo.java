@@ -90,8 +90,10 @@ public class Catalogo {
         }
     }
     
-    public String getPelicula(String s){
-        return list.get(s).getAllInformation();
+    public List<String> getPelicula(String s){
+        List<String> aux= new ArrayList<>();
+        aux.add(list.get(s).getAllInformation());
+        return aux;
     }
 
     

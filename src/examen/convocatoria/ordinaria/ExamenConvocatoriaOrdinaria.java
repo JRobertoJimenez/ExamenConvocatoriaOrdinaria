@@ -19,6 +19,8 @@ public class ExamenConvocatoriaOrdinaria {
     /**
      * @param args the command line arguments
      */
+    
+    
     public static void main(String[] args) {
         // TODO code application logic here
         Catalogo c=new CatologoLoaderInternal().load();
@@ -31,27 +33,38 @@ public class ExamenConvocatoriaOrdinaria {
                 v.mostrar(c.getGeneros());
                 System.out.println("Selecione un genero:");
                 v.mostrar(c.getGenero(v.esperarRespuesta()));
+                selectPelicula(v,c);
                 break;
             case "s":
                 System.out.println("Indique el parámetro de busqueda:");
                 String sf=v.esperarRespuesta();
                 v.mostrar(c.search(sf));
+                selectPelicula(v,c);
                 break;
             case "n":
                 v.mostrar(c.getNovedades());
+                selectPelicula(v,c);
                 break;
             case "v":
                 v.mostrar(c.getVistas());
+                selectPelicula(v,c);
                 break;
             case "m":
                 v.mostrar(c.getValoradas());
+                selectPelicula(v,c);
                 break;
             case "a":
                 v.mostrar(c.getPeliculas());
+                selectPelicula(v,c);
                 break;
         }
                 
         
+    }
+
+    private static void selectPelicula(ViewConsole v,Catalogo c) {
+        System.out.println("Indique el titulo que desea seleccionar:");
+        v.mostrar(c.getPelicula(v.esperarRespuesta()));
     }
 }
     

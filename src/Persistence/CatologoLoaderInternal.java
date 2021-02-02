@@ -23,10 +23,13 @@ public class CatologoLoaderInternal implements CatalogoLoader {
         String[] actores={"dibujos"};
         Pelicula p1=new Pelicula("img0", "Caperucita Roja", "Miedo", "1995", "Mike",actores, "4", "90");
         Pelicula p2=new Pelicula("img1", "Blancanieves", "Comedia", "1998", "Jhon", actores, "3.8", "100");
+        Pelicula p3=new Pelicula("img2", "La bella durmiente", "Comedia", "1994", "Richard", actores, "2", "70");
         c.addPelicula(p1);
         c.addPelicula(p2);
+        c.addPelicula(p3);
         c.addNovedad(p1);
         c.addVista(p2);
+        c.addValorada(p3);
         return c;
     }
     
