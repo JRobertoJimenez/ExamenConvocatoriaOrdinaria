@@ -5,7 +5,9 @@
  */
 package View;
 
+import com.sun.glass.ui.SystemClipboard;
 import java.util.List;
+import java.util.Scanner;
 
 /**
  *
@@ -25,8 +27,9 @@ public class ViewConsole implements View{
     }
     
     public String esperarRespuesta(){
-        return System.console().readLine();
-        
+        Scanner sc= new Scanner(System.in);
+        String s=sc.nextLine();
+        return s;
     }
     
 }

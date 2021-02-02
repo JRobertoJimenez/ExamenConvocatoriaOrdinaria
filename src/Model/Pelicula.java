@@ -41,9 +41,6 @@ public class Pelicula{
     }
     
     
-    public String mostrar() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
     String getGenero() {
         return genero;

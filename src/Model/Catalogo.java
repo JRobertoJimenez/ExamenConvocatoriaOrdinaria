@@ -5,13 +5,10 @@
  */
 package Model;
 
-import com.sun.javafx.scene.control.skin.VirtualFlow;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 /**
  *
@@ -49,8 +46,8 @@ public class Catalogo {
         valoradas.add(p.getTitulo());
     }
     
-    public Set<String> getPeliculas(){
-        return list.keySet();
+    public List<String> getPeliculas(){
+        return new ArrayList<>(list.keySet());
     }
     
     public List<String> getNovedades(){
@@ -79,13 +76,25 @@ public class Catalogo {
         return auxl;
     }
 
-    public boolean contains(String s) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    
+
+    public List<String> getGeneros() {
+        return new ArrayList<>(genero.keySet());
+    }
+    
+    public List<String> getGenero(String ge) {
+        if(genero.containsKey(ge)){
+            return genero.get(ge);
+        }else{
+            return null;
+        }
+    }
+    
+    public String getPelicula(String s){
+        return list.get(s).getAllInformation();
     }
 
-    public List<String> getInformation() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
     
     
     
